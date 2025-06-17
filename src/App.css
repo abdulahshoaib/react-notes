@@ -1,0 +1,248 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: dark;
+  color: #e0e6ed;
+  background-color: #101820;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+a {
+  font-weight: 500;
+  color: #00bcd4;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #00acc1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-family: inherit;
+  background-color: #1c1f2a;
+  color: #e0e6ed;
+  cursor: pointer;
+  transition: border-color 0.25s, background-color 0.25s;
+}
+
+button:hover {
+  border-color: #00bcd4;
+  background-color: #2a2f3d;
+}
+
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+/* NAVBAR */
+
+.navbar {
+  background-color: #1c1f2a;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  border-bottom: 1px solid #2d3442;
+}
+
+.nav-link {
+  color: #cbd5e1;
+  font-size: 1.1rem;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-link:hover {
+  background-color: #2a2f3d;
+  color: #ffffff;
+}
+
+.nav-link.active {
+  background-color: #00bcd4;
+  color: white;
+}
+
+/* COMMON CONTAINERS */
+
+.home-container,
+.pastes-container {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #1c1f2a;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 188, 212, 0.2);
+  color: #e0e6ed;
+}
+
+/* INPUTS & TEXTAREAS */
+
+.home-input,
+.pastes-search,
+.home-textarea {
+  width: 100%;
+  padding: 0.75rem;
+  margin: 0.5rem 0 1rem;
+  border: 1px solid #394150;
+  border-radius: 8px;
+  background-color: #2a2f3d;
+  color: #e0e6ed;
+  font-size: 1rem;
+}
+
+.home-input::placeholder,
+.pastes-search::placeholder,
+.home-textarea::placeholder {
+  color: #9ca3af;
+}
+
+.home-button {
+  width: 100%;
+  background-color: #00bcd4;
+  border: none;
+  padding: 0.75rem;
+  border-radius: 8px;
+  color: white;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.home-button:hover {
+  background-color: #00acc1;
+}
+
+/* PASTE LIST */
+
+.pastes-list {
+  margin-top: 1rem;
+}
+
+.pastes-search {
+  padding: 8px;
+  width: 80%;
+  max-width: 400px;
+  margin: 1rem auto;
+  display: block;
+}
+
+/* PASTE CARD */
+
+.paste-card {
+  background-color: #2a2f3d;
+  border: 1px solid #394150;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  color: #e0e6ed;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 200px;
+}
+
+.paste-card h3 {
+  margin-bottom: 0.5rem;
+  color: #00bcd4;
+  font-size: 1.2rem;
+}
+
+.paste-card p {
+  margin: 0.25rem 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.paste-date {
+  font-size: 0.85rem;
+  color: #94a3b8;
+  margin-top: 0.5rem;
+}
+
+.paste-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.paste-buttons button {
+  padding: 0.4rem 0.8rem;
+  font-size: 0.9rem;
+  border: none;
+  border-radius: 6px;
+  background-color: #00bcd4;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.paste-buttons button:hover {
+  background-color: #00acc1;
+}
+
+/* VIEW PASTE COMPONENT */
+
+.view-paste-container {
+  max-width: 700px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #1c1f2a;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 188, 212, 0.1);
+  color: #e0e6ed;
+  text-align: left;
+  word-wrap: break-word;
+}
+
+.view-paste-title {
+  font-size: 2rem;
+  color: #00bcd4;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #00bcd4;
+  padding-bottom: 0.5rem;
+}
+
+.view-paste-content {
+  white-space: pre-wrap;
+  line-height: 1.6;
+  font-size: 1rem;
+  background-color: #2a2f3d;
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-top: 1rem;
+  color: #e0e6ed;
+  font-family: 'Courier New', monospace;
+  box-shadow: inset 0 0 5px rgba(255,255,255,0.05);
+}
+
+.view-paste-date {
+  font-size: 0.9rem;
+  color: #94a3b8;
+  margin-top: 1rem;
+  font-style: italic;
+}
